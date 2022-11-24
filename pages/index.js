@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
+import Footer from '../Components/Footer'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -11,61 +13,28 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <main className={'max-w-100vw min-h-screen bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black relative flex justify-center items-center'}>
+        <div className='max-w-full  h-1/2 flex flex-row'>
+          <div className='basis-1/2 flex flex-col justify-center items-end'>
+            <h1 className='text-5xl text-end font-bold inline 
+            from-yellow-400 to-yellow-600 bg-gradient-to-l text-transparent bg-clip-text 
+            leading-snug w-3/4 pt-10 pb-6
+            '>
+              Take a few moments to read the quran
+            </h1>
+            <Link href='/surah' className='bg-gradient-to-l from-yellow-300 to-yellow-600 hover:from-green-400 hover:to-teal-600 text-gray-50 font-bold px-12 py-3 rounded-full
+            
+            '>
+              Read Now
+            </Link>
+          </div>
+          <div className='basis-1/2 flex flex-col justify-center items-baseline'>
+            <img src={'./al-quran.png'} className='w-1/2 pt-0 drop-shadow-sm' alt='' />
+          </div>
         </div>
-      </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      </main>
+      <Footer />
     </div>
   )
 }
