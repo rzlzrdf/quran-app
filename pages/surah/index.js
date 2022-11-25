@@ -33,7 +33,7 @@ const surah = () => {
                     <h1 className='text-7xl text-white font-bold shadow-lg
                from-teal-300 to-green-100 bg-gradient-to-l text-transparent bg-clip-text 
                '>Surah</h1>
-                    <div className='min-h-3/4 w-full cursor-pointer grid grid-cols-6 gap-10 px-10  max-lg:grid-cols-3 max-sm:grid-cols-2'>
+                    <div className='min-h-3/4 w-full cursor-pointer grid grid-cols-6 gap-10 px-10  max-lg:grid-cols-3 max-md:gap-5 max-sm:grid-cols-2'>
                          {data.map(items => {
                               return <Card key={items.number} id={items.number} latin={items.name} arab={items.asma} no={items.number} arti={items.translationId} />
                          })}

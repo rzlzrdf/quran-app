@@ -41,6 +41,7 @@
 @media screen and (max-width:767px) {
      .card {
           gap: 0;
+          padding: 0;
      }
 
      .card h2 {
