@@ -8,14 +8,17 @@ module.exports = {
     extend: {
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
-        'arab': ['Noto Naskh Arabic', 'Noto Naskh Arabic', 'serif']
+        'arab': ['Noto Naskh AraSbic', 'Noto Naskh Arabic', 'serif']
       },
       textColor: {
         'gold': ['#FFD700']
       },
       maxWidth: {
         '100vw': ['100vw']
-      }
+      },
+      minWidth : {
+        '300px' : ['300px']
+      },
     },
   },
   plugins: [],

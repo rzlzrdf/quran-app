@@ -23,7 +23,7 @@ const surah = () => {
                     setAyahs(res.data.ayahs)
                })
 
-     }, [])
+     }, [data, ayahs])
 
      return (
 
@@ -34,23 +34,23 @@ const surah = () => {
                </div>
                <div className='w-full h-36 flex flex-col justify-center items-center px-12 '>
                     <h1 className='text-8xl font-semibold font-serif 
-                    from-teal-300 to-green-100 bg-gradient-to-l text-transparent bg-clip-text 
+                    from-teal-300 to-green-100 bg-gradient-to-l text-transparent bg-clip-text max-md:text-3xl
                     '>
-                         {data ? data.asma : 'Ayah'}
+                         {data ? data.asma : 'Loading...'}
                     </h1>
-                    <h1 className='text-3xl text-white font-serif'>{data ? data.name : 'Nama Ayahs'}</h1>
-                    <h1 className='text-xl text-lime-100 font-light font-serif'>({data ? data.translationId : '0'})</h1>
+                    <h1 className='text-3xl text-white font-serif'>{data ? data.name : 'Wait a moment'}</h1>
+                    <h1 className='text-xl text-lime-100 font-light font-serif'>({data ? data.translationId : 'Loading Now...'})</h1>
                </div>
                <div className='w-full min-h-full'>
                     {
                          ayahs ? ayahs.map(items => {
                               return (
-                                   <div key={items.verseId} className='flex flex-row justify-around gap-16 px-20'>
-                                        <div className='w-1/4 h-fit flex flex-col gap-3'>
-                                             <h1 className='text-xl text-white text-justify font-serif' key={items.verseId}><span>{items.verseId}. </span>{items.indoText}</h1>
-                                             <audio src={items.audio} controls className='w-2/3 h-6'></audio>
+                                   <div key={items.verseId} className='flex flex-row justify-around gap-16 px-20 max-md:flex-wrap max-md:gap-3'>
+                                        <div className='basis-1/4 h-fit flex flex-col gap-3 max-md:basis-full max-md:order-2 mb-10'>
+                                             <h1 className='text-xl text-white text-justify font-serif max-md:text-md' key={items.verseId}><span>{items.verseId}. </span>{items.indoText}</h1>
+                                             <audio src={items.audio} controls className='w-2/3 h-6 max-md:w-full'></audio>
                                         </div>
-                                        <h1 className='text-6xl text-white font-arab w-3/4 h-fit text-end leading-relaxed' key={items.verseId}>{items.ayahText}</h1>
+                                        <h1 className='text-6xl text-white font-arab basis-3/4 h-fit text-end leading-relaxed max-md:basis-full max-md:text-4xl' key={items.verseId}>{items.ayahText}</h1>
                                    </div>
                               )
                          }) : '2'
