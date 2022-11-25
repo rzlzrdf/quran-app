@@ -6,7 +6,6 @@
      padding-top: 3%;
      padding-bottom: 3%;
      box-shadow: 16px 0px 31px 8px rgba(0, 0, 0, 0.1);
-     line-height: 85%;
 }
 
 .card h2 {
@@ -21,6 +20,11 @@
 .card p {
      font-size: 0.7em;
      font-style: italic;
+}
+
+.card h3{
+     font-size: 0.8em;
+     font-weight: 500;
 }
 
 .card:hover {
