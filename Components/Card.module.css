@@ -3,32 +3,63 @@
      background: linear-gradient(90deg, rgb(208, 207, 224) 0%, rgba(253, 251, 255, 1) 63%);
      border-radius: 20px;
      text-align: center;
-     padding-top: 3%;
-     padding-bottom: 3%;
+     aspect-ratio: 4/3;
+     padding: 0 5%;
      box-shadow: 16px 0px 31px 8px rgba(0, 0, 0, 0.1);
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     gap: 5%;
 }
 
 .card h2 {
-     font-size: 2em;
+     font-size: 2.5vw;
      font-weight: 600;
 }
 
 .card h1 {
+     font-size: 1.6vw;
      font-weight: 700;
 }
 
 .card p {
-     font-size: 0.7em;
+     font-size: 0.8vw;
      font-style: italic;
 }
 
-.card h3{
-     font-size: 0.8em;
+.card h3 {
+     font-size: 0.8vw;
      font-weight: 500;
 }
 
 .card:hover {
      background: rgb(76, 231, 154);
-     background: linear-gradient(270deg, rgba(76, 231, 154, 1) 0%, rgba(6, 142, 51, 1) 63%);
+     background: linear-gradient(250deg, rgb(35, 228, 131) 0%, rgba(6, 142, 51, 1) 63%);
      color: white;
+}
+
+@media screen and (max-width:767px) {
+     .card {
+          gap: 0;
+     }
+
+     .card h2 {
+          font-size: 2em;
+          font-weight: 600;
+     }
+
+     .card h1 {
+          font-size: 1em;
+          font-weight: 700;
+     }
+
+     .card p {
+          font-size: 0.8em;
+          font-style: italic;
+     }
+
+     .card h3 {
+          font-size: 0.8em;
+          font-weight: 500;
+     }
 }
