@@ -3,8 +3,19 @@
      background: linear-gradient(90deg, rgba(241, 240, 255, 1) 0%, rgba(256, 256, 255, 1) 63%);
      border-radius: 20px;
      text-align: center;
-     padding: 5% 0%;
+     padding-top: 3%;
+     padding-bottom: 3%;
      box-shadow: 16px 0px 31px 8px rgba(0, 0, 0, 0.1);
+     line-height: 2%;
+}
+
+.card h2 {
+     font-size: 2em;
+     font-weight: 600;
+}
+.card p {
+     font-size: 0.8em;
+     font-style: italic;
 }
 
 .card:hover {
