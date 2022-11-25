@@ -17,7 +17,7 @@ module.exports = {
         '100vw': ['100vw']
       },
       minWidth : {
-        '300px' : ['300px']
+        '300px' : ['250px']
       },
     },
   },
