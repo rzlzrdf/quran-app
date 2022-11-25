@@ -30,9 +30,8 @@ export default function Home() {
             <img src={'./al-quran.png'} className='w-1/2 pt-0 drop-shadow-sm' alt='' />
           </div>
         </div>
-
+        <Footer />
       </main>
-      <Footer />
     </div>
   )
 }

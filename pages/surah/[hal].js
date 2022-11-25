@@ -30,7 +30,6 @@ const surah = () => {
           <div className='max-w-100vw min-h-screen bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black relative flex flex-col justify-around py-20 gap-10 items-center'>
                <div className='w-full flex justify-between items-start px-10'>
                     <Link href='/surah' className='p-2 pl-4 text-lg rounded-l-full text-center font-bold bg-white'>Back</Link>
-                    <input type={'search'} className='w-1/5 max-sm:w-3/4 p-3 pl-6 bg-transparent border border-teal-700 rounded-full text-white font-xl' placeholder='Cari Nama atau Nomor Surah' />
                </div>
                <div className='w-full h-36 flex flex-col justify-center items-center px-12 '>
                     <h1 className='text-8xl font-semibold font-serif 
