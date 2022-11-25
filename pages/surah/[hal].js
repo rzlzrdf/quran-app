@@ -44,7 +44,7 @@ const surah = () => {
                     {
                          ayahs ? ayahs.map(items => {
                               return (
-                                   <div key={items.verseId} className='flex flex-row justify-around gap-16 px-20 max-md:flex-wrap max-md:gap-3'>
+                                   <div key={items.verseId} className='flex flex-row justify-around gap-16 px-20 max-md:px-10 max-md:flex-wrap max-md:gap-3'>
                                         <div className='basis-1/4 h-fit flex flex-col gap-3 max-md:basis-full max-md:order-2 mb-10'>
                                              <h1 className='text-xl text-white text-justify font-serif max-md:text-md' key={items.verseId}><span>{items.verseId}. </span>{items.indoText}</h1>
                                              <audio src={items.audio} controls className='w-2/3 h-6 max-md:w-full'></audio>
