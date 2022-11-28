@@ -4,7 +4,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { Router, useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
-import Card from '../../Components/Card'
 import Loading from '../../Components/Loading'
 
 const surah = () => {
