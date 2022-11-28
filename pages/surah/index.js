@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import Card from '../../Components/Card'
-import Loading from '../../Components/loading'
+import Loading from '../../Components/Loading'
 
 const surah = () => {
      // eslint-disable-next-line react-hooks/rules-of-hooks

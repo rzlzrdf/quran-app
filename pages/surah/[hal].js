@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Router, useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 import Card from '../../Components/Card'
-import Loading from '../../Components/loading'
+import Loading from '../../Components/Loading'
 
 const surah = () => {
      // eslint-disable-next-line react-hooks/rules-of-hooks
