@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Footer from '../Components/Footer'
 import styles from '../styles/Home.module.css'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -27,7 +28,7 @@ export default function Home() {
             </Link>
           </div>
           <div className='basis-1/2 flex flex-col justify-center items-start max-md:basis-full max-md:items-center'>
-            <img src={'./al-quran.png'} className='w-1/2 min-w-300px pt-0 drop-shadow-sm ' alt='' />
+            <Image width={400} height={400} src={'/al-quran.png'} className='w-1/2 min-w-300px pt-0 drop-shadow-sm ' alt='e-quran' />
           </div>
         </div>
       </main>

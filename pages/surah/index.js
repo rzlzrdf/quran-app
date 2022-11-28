@@ -4,11 +4,13 @@ import Head from 'next/head'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import Card from '../../Components/Card'
+import Loading from '../../Components/loading'
 
 const surah = () => {
      // eslint-disable-next-line react-hooks/rules-of-hooks
      const [data, setData] = useState([])
      const [search, setSearch] = useState("")
+     const [loading, setLoading] = useState(true)
      // eslint-disable-next-line react-hooks/rules-of-hooks
      useEffect(() => {
           axios.get('https://quranapi.idn.sch.id/surah')
@@ -16,6 +18,7 @@ const surah = () => {
                     res => {
                          console.log(res)
                          setData(res.data.data)
+                         setLoading(false)
                     }
                )
      }, [])
@@ -36,18 +39,20 @@ const surah = () => {
                     <h1 className='w-full text-center mb-24 text-7xl text-white font-bold shadow-lg from-teal-300 to-green-100 bg-gradient-to-l text-transparent bg-clip-text'>
                          Surah
                     </h1>
-                    <div className='min-h-3/4 w-full cursor-pointer grid grid-cols-6 gap-10 px-10 max-lg:grid-cols-3 max-md:gap-5 max-sm:grid-cols-2'>
-                         {data.filter(val => {
-                              if (search == '') {
-                                   return val
-                              } else if (val.name.toLowerCase().includes(search.toLocaleLowerCase())) {
-                                   return val
-                              }
-                         }).map(items => {
-                              return <Card key={items.number} id={items.number} latin={items.name} arab={items.asma} no={items.number} arti={items.translationId} />
-                         })}
+                    { loading ? <Loading /> :
+                         <div className='min-h-3/4 w-full cursor-pointer grid grid-cols-6 gap-10 px-10 max-lg:grid-cols-3 max-md:gap-5 max-sm:grid-cols-2'>
+                              {data.filter(val => {
+                                   if (search == '') {
+                                        return val
+                                   } else if (val.name.toLowerCase().includes(search.toLocaleLowerCase())) {
+                                        return val
+                                   }
+                              }).map(items => {
+                                   return <Card key={items.number} id={items.number} latin={items.name} arab={items.asma} no={items.number} arti={items.translationId} />
+                              })}
 
-                    </div>
+                         </div>
+                    }
                </div>
           </>
      )
